@@ -2,14 +2,14 @@ import images from '../images/exporting.js';
 import { useState } from 'react';
 
 const Projects = () => {
-    const [nurture, setNurture] = useState(false)
+    const [condiments, setCondiments] = useState(false)
     const [swiss, setSwiss] = useState(false)
     const [ecommerce, setEcommerce] = useState(false)
     const [mail, setMail] = useState(false)
     const [whatsapp, setWhatsapp] = useState(false)
 
     const descriptions = {
-        nurture: 'Nurture parenting is a shopify theme, created for the sale of services, for the upbringing of children from newborn to 5 years old. It was developed in shopify using liquid as programming language, which allowed the creation of different sections that can be easily modified from a web interface called customizer by the store owner.',
+        condiments: 'Immerse yourself in a culinary experience with our meticulously designed online marketplace, seamlessly built with React.js and Django Rest Framework. Based in Barquisimeto, Venezuela, we take pride in curating a diverse collection of premium condiments, nuts, spices, and baking essentials. Our platform is a testament to the synergy of cutting-edge technology and gastronomic excellence, promising a delightful journey for home cooks and seasoned chefs alike. Elevate your dishes with the finest ingredients, thoughtfully sourced to your doorstep—welcome to a world where technology meets gourmet indulgence.',
         swiss: 'This is a shopify theme for swissgetall store, which is a beauty supply store in switzerland. It was developed in shopify and liquid, in addition, it uses metadata to specify each product and uses javascrip code to create the user interface.',
         ecommerce: 'This project consists of creating an e-commerce website using python and the django framework. For the storage of product data, an ORM model database was used, in addition, python was used to create the functionality of the page and the rendering of the html templates.',
         mail: "The objective of this project was to create a web application that allows the user to send emails to other users who are registered in the application's database. This is a front end web application that makes api calls to send and receive emails.",
@@ -59,11 +59,11 @@ const Projects = () => {
             </section>
             <div className='flex-col align-center mobile-projects-container'>
                 <div className='mobile-projects-view'>
-                    <div className='mobile-project-box' style={{backgroundImage: `url(${images.nurture})`}}></div>
+                    <div className='mobile-project-box' style={{backgroundImage: `url(${images.condimentos})`}}></div>
                     <div className='mobile-project-info'>
-                        <h6 className='project-name'>Nurture Parenting</h6>
-                        <p className={!nurture ? 'page-content p-hidden' : 'page-content p-hidden grow'}>{descriptions.nurture} </p>
-                        <button onClick={() => {setNurture((nurture) => !nurture)}} className='mobile-project-link'>{!nurture ? 'Show more': 'Show less'}</button>
+                        <h6 className='project-name'>La Casa de los Condimentos</h6>
+                        <p className={!condiments ? 'page-content p-hidden' : 'page-content p-hidden grow'}>{descriptions.condiments} </p>
+                        <button onClick={() => {setCondiments((condiments) => !condiments)}} className='mobile-project-link'>{!condiments ? 'Show more': 'Show less'}</button>
                     </div>
                 </div>
                 <div className='mobile-projects-view'>

@@ -27,9 +27,9 @@ function Header() {
 
     const Checkpath = ({path, id, name, css}) => {
         if (window.location.pathname === path) {
-            return( <HashLink className={css} to={'#' + id} smooth>{name}</HashLink> )
+            return( <HashLink className={css} onClick={() => {showhide(sidebar.current)}} to={'#' + id} smooth>{name}</HashLink> )
         } else {
-            return( <HashLink className={css} to={path + '#' + id}>{name}</HashLink> )
+            return( <HashLink className={css} onClick={() => {showhide(sidebar.current)}} to={path + '#' + id}>{name}</HashLink> )
         }
     }
 
@@ -52,10 +52,10 @@ function Header() {
                         <img src={images.mylogo} className='footer-logo logo-sidebar-margin' alt='logo'></img>
                         <div className='links-container-footer'>
                             <div className='flex-link'>
-                                <Link to='/' className='link-footer' onClick={() => {ScrollToTop('/')}}>Home</Link>
+                                <Link to='/' className='link-footer' onClick={() => {ScrollToTop('/'); showhide(sidebar.current)}}>Home</Link>
                             </div>
                             <div className='flex-link'>
-                                <Link to='/about' className='link-footer' onClick={() => {ScrollToTop('/about')}}>About me</Link>
+                                <Link to='/about' className='link-footer' onClick={() => {ScrollToTop('/about'); showhide(sidebar.current)}}>About me</Link>
                             </div>
                             <div className='flex-link'>
                                 <Checkpath path='/' id='projects' name='Projects' css='link-footer'/>
@@ -71,10 +71,10 @@ function Header() {
                             </div>
                         </div>
                         <div className='flex-social-horizontal'>
-                            <a className='link-sidebar-icon' href="https://wa.me/584127615686?text=Hi%20Alexis%20how%20are%20you?"><FaWhatsapp/></a>
-                            <a className='link-sidebar-icon' href='https://instagram.com/alexisdjm__?igshid=ZDdkNTZiNTM='><FaInstagram /></a>
-                            <a className='link-sidebar-icon' href='https://github.com/Alexisdjm'><FaGithub/></a>
-                            <a className='link-sidebar-icon' href='https://www.linkedin.com/in/alexis-jimenez-42083823a'><FaLinkedin/></a>
+                            <a target="_blank" rel="noreferrer" className='link-sidebar-icon' href="https://wa.me/584127615686?text=Hi%20Alexis%20how%20are%20you?"><FaWhatsapp/></a>
+                            <a target="_blank" rel="noreferrer" className='link-sidebar-icon' href='https://instagram.com/alexisdjm__'><FaInstagram /></a>
+                            <a target="_blank" rel="noreferrer" className='link-sidebar-icon' href='https://github.com/Alexisdjm'><FaGithub/></a>
+                            <a target="_blank" rel="noreferrer" className='link-sidebar-icon' href='https://www.linkedin.com/in/alexis-jimenez-42083823a'><FaLinkedin/></a>
                         </div>
     
                     </div>

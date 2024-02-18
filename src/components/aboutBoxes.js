@@ -4,15 +4,27 @@ import images from "../images/exporting";
 const Boxes = () => {
 
     const content = {
-        myself: 'My name is Alexis David Jiménez Mendoza, I am 23 years old, I am from Barquisimeto, Venezuela, electronic engineer and Full Stack Web Developer. I completed my studies in electronic engineer and my certification at edx Harvard as a Full Stack Web Developer in 2022. I currently work as a frontend web developer at Meraki Vision agency. In my job, I am responsible for shopify themes development, user interface design, creating new features, installing and configuring apps. My passion is technology, especially software development, that is why in my free time, I am practicing and learning code, in order to improve my skills, ability to solve problems and learn about new technologies such as frameworks, development tools, libraries, new languages ​​and anything related to technology.',
-        developer: 'I am a Full Stack Web Developer, I really like the front end and UX UI design,  however, I am very interested in backend, SQL, non SQL databases and more. I am extremely demanding with my work, always focusing on implementing  code following the best practices and guaranteening the functionality of the project.',
-        backend: 'As a Full Stack developer, in my experience I have needed to learn concepts and use technologies related to backend or website functionality. I currently use django, which is a backend framework that uses python as its language. However I am interested in learning more and studying new technologies like Node.js, Express.js, Fast API, Flask, SQL databases and more.',
-        frontend: 'In my projects, I usually focus a lot on the visual part and everything related to the frontend. As a developer, I use HTML and css, plus I feel very comfortable working with javascript and CSS frameworks like Bootstrap and TailwindCSS. Currently, I use React.js to create the interfaces in my projects, however, I want to learn how to use different technologies like vue.js, solid.js and frontend frameworks like Angular.',
-        design1: 'Usually, I design the website’s interface and select the assets before starting the development in code. My favorite design tool is Fingma, used to design the interface of the website for desktop and mobile devices. Finally, I select the font and the color palette.',
-        design2: 'In addition, I use other tools to select the assets such as icons and images. Among these tools is flaticon, font awesome and material design icons, which allow me to select a large number of icons in different formats. In addition, I use pexels and freepiks to download images in good quality and adobe illustrator to edit these images',
-        iwant: 'I want to study and be more prepare as a developer, an engineer and professional. I am currently very interested in continuing my studies in game development and learning about mobile development using technologies such as react native and flutter. In addition, I would like to learn about desktop application development and do a postgraduate degree in artificial intelligence.',
-        hobbies: 'In my free time, I play video games. I really like the games of the call of duty saga, overwatch, Titanfall, Battlefield, fromsoftware games, playstation exclusives and single player games. On the other hand, I really like science fiction movies, especially those related to technology like Ironman, Pacific rim, Alien and Starwars.'
+        myself: `My name is Alexis David Jiménez Mendoza, a 23-year-old professional hailing from Barquisimeto, Venezuela. I hold a degree in Electronic Engineering and am a certified Full Stack Web Developer, having successfully completed my studies in Electronic Engineering and obtained certification from Harvard via edx in 2022. Currently, I serve as a Frontend Web Developer at Meraki Vision agency, where my responsibilities encompass the development of Shopify themes, user interface design, and the implementation of new features, including the installation and configuration of various apps. 
+            My ardor for technology, particularly in the realm of software development, propels me to dedicate my free time to honing my coding skills. This continual pursuit aims to enhance my problem-solving capabilities and stay abreast of emerging technologies, encompassing frameworks, development tools, libraries, new programming languages, and all facets of the ever-evolving technological landscape.`,
+        developer: 'As a seasoned Full Stack Web Developer, my passion lies not only in crafting compelling frontend experiences and innovative UX/UI designs but also in delving deep into the intricacies of backend development, including expertise in SQL, NoSQL databases, and beyond. My commitment to excellence is unwavering, reflected in my meticulous approach to work. I consistently adhere to industry best practices, ensuring the implementation of code that not only meets but exceeds standards, thereby guaranteeing the seamless functionality of every project.',
+        backend: 'As a versatile Full Stack Developer, my professional journey has entailed mastering a spectrum of concepts and deploying diverse technologies for backend development and optimal website functionality. At present, my proficiency extends to Django, a robust backend framework utilizing Python as its core language. However, my fervor for continuous growth compels me to delve into and master cutting-edge technologies, encompassing Node.js, Express.js, Fast API, Flask, SQL databases, and an array of other innovative tools. This dedication to ongoing learning underscores my commitment to remaining agile in the dynamic realm of technology.',
+        frontend: 'In my projects, I prioritize the visual aspects and frontend components. As a developer, I proficiently utilize HTML and CSS, with a keen command of JavaScript and CSS frameworks such as Bootstrap and TailwindCSS. While currently employing React.js for interface development, I am eager to broaden my skill set by delving into other technologies like Vue.js, Svelte, and Solid.js. Additionally, I am intrigued by the prospect of exploring frontend frameworks like Angular to further diversify my capabilities.',
+        design1: "I am actively involved in the meticulous design process of websites, where I curate the interface and carefully select assets prior to commencing the development phase. My preferred design tool, Figma, serves as the cornerstone for crafting the website's interface, catering to both desktop and mobile devices. Concluding the design phase involves thoughtful choices in font selection and the establishment of a harmonious color palette.",
+        design2: 'Furthermore, I leverage a suite of tools to source additional assets such as icons and images. Noteworthy among these are Flaticon, Font Awesome, and Material Design Icons, providing an extensive array of icons in various formats. To complement this, platforms like Pexels and Freepik become indispensable for acquiring high-quality images. For intricate image editing, Adobe Illustrator stands out as my tool of choice.',
+        iwant: `I am dedicated to advancing my capabilities as a developer, engineer, and professional through ongoing education. Currently, my focus is on expanding my knowledge in game development, particularly exploring technologies like React Native and Flutter for mobile applications. 
+        Beyond this, I am eager to delve into desktop application development, and I have aspirations to pursue a postgraduate degree in artificial intelligence. These endeavors underscore my commitment to staying abreast of the latest technologies and fostering a well-rounded skill set in software development.`,
+        hobbies: 'In my leisure hours, I indulge in playing video games, with a particular fondness for titles from the Call of Duty series, Overwatch, Titanfall, Battlefield, FromSoftware creations, PlayStation exclusives, and engaging single-player experiences. On a different note, my enthusiasm extends to science fiction films, particularly those intricately woven with technological themes such as Ironman, Pacific Rim, Alien, and the iconic Star Wars franchise.'
     }
+
+    const ParagraphWithLineBreaks = ({ text }) => {
+        return (
+          <>
+            {text.split('\n').map((paragraph, index) => (
+              <p key={index}>{paragraph}</p>
+            ))}
+          </>
+        );
+      };
 
     const Images = ({css, img1, img2, img3, img4, img5, img6}) => {
         return(
@@ -51,7 +63,9 @@ const Boxes = () => {
             <div className="my-resume-container flex-center card-space-gap">
                 <div className="card-align-bg myself-card-dimensions flex-col align-center inner-card-gap margin-side-40">
                     <h4 className="about-boxes-title justify-center-text">Who Am I ?</h4>
-                    <p className="page-content justify-center-text myself-content">{content.myself}</p>
+                    <p className="page-content justify-center-text myself-content">
+                        <ParagraphWithLineBreaks text={content.myself}/>
+                    </p>
                     <Images css='flex-center align-center first-gap grid-box-2-images' img1={images.engineer} img2={images.ui} img3={images.web} img4={images.graduation}/>
                 </div>
             </div>
@@ -108,7 +122,9 @@ const Boxes = () => {
             <div className="flex-center card-space-gap container-about-settings">
                 <div className="card-align-bg future-card flex-col align-center">
                     <h4 className="about-boxes-title justify-center-text">What I Want To Do ?</h4>
-                    <p className="page-content justify-center-text myself-content">{content.iwant}</p>
+                    <p className="page-content justify-center-text myself-content">
+                        <ParagraphWithLineBreaks text={content.iwant}/>
+                    </p>
                     <Images css='grid-2' img1={images.reactlogo} img2={images.flutter} img3={images.unityLogo} img4={images.ai}/>
                 </div>
                 <div id="frontend" className="card-align-bg frontend-card flex-col align-center card-space-gap">

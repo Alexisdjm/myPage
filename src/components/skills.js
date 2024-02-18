@@ -29,9 +29,7 @@ const Skills = () => {
               <h4 className='skills-title'>What I Am Great At?</h4>
               <div className='myself-text-container'>
                   <p className='page-content justify-center-text'>
-                  I am electronic engineer and Full Stack Web Developer. 
-                  I have experience in web applications using Python and Django. 
-                  In addition, I have knowledge in videogames development with unity and ecommerce sites using Shopify and Liquid.
+                  Hello there! I'm Alexis Jiménez, an Electronics and Computer Engineer turned Full Stack Web Developer. With a strong foundation in both hardware and software, I bring a unique perspective to the world of web development. My expertise spans various frontend and backend technologies, allowing me to craft seamless and innovative digital experiences. Beyond the web, I also dabble in the realm of game development, adding a touch of creativity to my technical skill set. Explore my portfolio and let's embark on a journey of turning ideas into digital realities together!
                   </p>
               </div>
               <div className='cien'>

@@ -6,10 +6,7 @@ const Technologies = () => {
             <div className='flex-col align-center img-gap technologies-container'>
                 <h4 className='skills-title'>Technologies</h4>
                 <p className='page-content justify-center-text'>
-                    My goal is to improve my skills to carry out quality projects in a professional manner. 
-                    This is the reason why, i am constantly practicing and learning the lastest technologies. 
-                    Personally, i prefer to work with code, althought i can also use no-code platforms such as 
-                    certains CMS, static website generators and more.
+                Driven by a relentless pursuit of excellence, my primary goal as a developer and engineer is to continually elevate the quality of my projects, ensuring professional success. Embracing a philosophy of lifelong learning, I stay immersed in diverse technologies, constantly expanding my skill set. Whether mastering new frameworks or refining my proficiency with current tools, I am dedicated to delivering top-notch solutions. Join me on this journey of continuous improvement, where each project is a testament to my commitment to achieving excellence in the ever-evolving landscape of technology.
                 </p>
                 <div className='grid-img-matrix'>
                     <div className='flex-col align-center img-gap'>
