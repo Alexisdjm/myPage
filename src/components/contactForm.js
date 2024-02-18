@@ -4,7 +4,8 @@ import Modal from './modal.js';
 
 const Contact = () => {
 
-    let urlAPI = process.env.REACT_APP_API_URL;
+    let urlAPI = "https://api.alexiswebworks.com";
+    //let urlAPI = process.env.REACT_APP_API_URL;
     console.log(urlAPI)
 
     const [formvalue, setFormvalue] = useState({email:'', name:'', body: ''})
