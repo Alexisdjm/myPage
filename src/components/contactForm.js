@@ -6,7 +6,7 @@ const Contact = () => {
 
     let urlAPI = "https://api.alexiswebworks.com";
     //let urlAPI = process.env.REACT_APP_API_URL;
-    console.log(urlAPI)
+    // console.log(urlAPI)
 
     const [formvalue, setFormvalue] = useState({email:'', name:'', body: ''})
     const [show, setShow] = useState(false)
