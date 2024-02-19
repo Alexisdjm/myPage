@@ -44,17 +44,16 @@ const Contact = () => {
             console.log(result);
         });
 
-        document.getElementById('name').value = '';
-        document.getElementById('email').value = '';
-        document.getElementById('body').value = '';
+        formvalue.name = '';
+        formvalue.email = '';
+        formvalue.body = '';
           
         setShow(true)
-        
+
         setTimeout(() => {
             setShow(false)
-        }, 3000)
-
-        
+        }, 1500)
+    
     }
 
 
