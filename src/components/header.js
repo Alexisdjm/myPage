@@ -47,9 +47,14 @@ function Header() {
                     <Link to='/' onClick={() => {ScrollToTop('/')}}>
                         <img src={images.mylogowhite} className={!header ? 'mylogo' : 'mylogo img-smaller'} alt='mylogo'></img>
                     </Link>
-                    <button
-                    onClick={() => {showhide(sidebar.current)}} 
-                    className='sidebar-btn'><img className='img-sidebar' src={images.menu} alt='sidebar-btn'></img></button>
+                    <input onChange={() => {showhide(sidebar.current)}} id="toggleChecker" class="sidebar-btn" type="checkbox"></input>
+                    <label id="togglerLable" for="toggleChecker">
+                    <div className="checkboxtoggler">
+                        <div className="line-1"></div>
+                        <div className="line-2"></div>
+                        <div className="line-3"></div>
+                    </div>
+                    </label>
                     <div ref={sidebar} className='sidebar align-center'>
                         <img src={images.mylogo} className='footer-logo logo-sidebar-margin' alt='logo'></img>
                         <div className='links-container-footer'>
