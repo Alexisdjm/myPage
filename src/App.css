@@ -240,7 +240,7 @@ img.img-smaller {
   top: 30%;
   right: 0;
   gap: 35px;
-  z-index: 999;
+  z-index: 9;
   display: flex;
   color: white;
   position: fixed;
