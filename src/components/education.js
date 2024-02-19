@@ -64,17 +64,23 @@ const Education = () => {
             </div>
             <div id='education-mobile-slider' className='cien'>
                 <Carousel responsive={responsive} autoPlay={true} autoPlaySpeed={5000} ssr={true} draggable={true} infinite={true} removeArrowOnDeviceType={["tablet", "mobile"]}>
-                    <div className='study-box'>
+                    <div className='study-box--mobile-container'>
                         <img className='education-img' src={images.uny} alt='engineer'></img>
-                        <Hover content={contents.engineering} title='Web Programming with Python and JavaScript'/>
+                        <div className='study-box'>
+                            <Hover content={contents.engineering} title='Web Programming with Python and JavaScript'/>
+                        </div>
                     </div>
-                    <div className='study-box'>
+                    <div className='study-box--mobile-container'>
                         <img className='education-img' src={images.cs50w} alt='web'></img>
-                        <Hover content={contents.web} title='Web Programming with Python and JavaScript'/>
+                        <div className='study-box'>
+                            <Hover content={contents.web} title='Web Programming with Python and JavaScript'/>
+                        </div>
                     </div>
-                    <div className='study-box'>
+                    <div className='study-box--mobile-container'>
                         <img className='education-img' src={images.unity} alt='games'></img>
-                        <Hover content={contents.games} title='Web Programming with Python and JavaScript'/>
+                        <div className='study-box'>
+                            <Hover content={contents.games} title='Web Programming with Python and JavaScript'/>
+                        </div>
                     </div>
                 </Carousel>
                
