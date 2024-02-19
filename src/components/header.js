@@ -44,7 +44,9 @@ function Header() {
         <>
             <div className={!header ? 'navbar-container flex-center': 'navbar-container flex-center navbar-scroll'}>
                 <div className="flex-navbar align-center">
-                    <img src={images.mylogowhite} className={!header ? 'mylogo' : 'mylogo img-smaller'} alt='mylogo'></img>
+                    <Link to='/' onClick={() => {ScrollToTop('/')}}>
+                        <img src={images.mylogowhite} className={!header ? 'mylogo' : 'mylogo img-smaller'} alt='mylogo'></img>
+                    </Link>
                     <button
                     onClick={() => {showhide(sidebar.current)}} 
                     className='sidebar-btn'><img className='img-sidebar' src={images.menu} alt='sidebar-btn'></img></button>
