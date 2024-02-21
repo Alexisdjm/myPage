@@ -448,18 +448,20 @@ p.grow {
   margin: 30px 0;
 }
 
-
-
 .study-box {
   display: flex;
   width: fit-content;
-  border-radius: 35px;
+  border-radius: 0 30px 30px 0;
   background-color: var(--card-bg-color);
   padding: 20px;
   display: flex;
   gap: 20px;
   transition: .3s ease;
   transition-property: opacity,background-color,color;
+}
+
+.study-desktop-container {
+  display: flex;
 }
 
 .study-box--mobile-container {
@@ -482,7 +484,8 @@ p.grow {
   background-color: var(--color-white);
 }
 
-.study-box:hover .degree-desc, .study-box:hover .degree-name {
+.study-box:hover .degree-desc, 
+.study-box:hover .degree-name {
   color: var(--general-bg-color);
 }
 
@@ -502,12 +505,32 @@ p.grow {
   font-weight: 400;
 }
 
-.education-img {
-  width: 155px;
-  aspect-ratio: 1/1;
-  border-radius: 30px;
-  object-fit: cover;
+.img-container-education {
+  width: 200px;
+  border-radius: 35px 0 0 35px;
+  overflow: hidden;
 }
+
+.education-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: all 0.3s ease-in-out;
+}
+
+.education-img:hover {
+  transform: scale(1.1);
+}
+
+.img-container-education:hover + .study-box .degree-desc, 
+.img-container-education:hover + .study-box .degree-name {
+  color: var(--general-bg-color);
+}
+
+.img-container-education:hover + .study-box {
+  background-color: var(--color-white);
+}
+
 
 .degree-name, .degree-desc, .degree-btn {
   color: var(--color-white);

@@ -43,22 +43,34 @@ const Education = () => {
         <div className='education-container flex-col align-center'>
             <h4 className='skills-title'>Education</h4>
             <div id='education-boxes' className='flex-col space-between --gap'>
-                <div className='study-box'>
-                    <img className='education-img' src={images.uny} alt='engineer'></img>
-                    <div className='flex-col space-between'>
-                        <Hover  content={contents.engineering} title='Electronic Engineering'/>
+                <div className='study-desktop-container'>
+                    <div className='img-container-education'>
+                        <img className='education-img' src={images.uny} alt='engineer'></img>
+                    </div>
+                    <div className='study-box'>
+                        <div className='flex-col space-between'>
+                            <Hover  content={contents.engineering} title='Electronic Engineering'/>
+                        </div>
                     </div>
                 </div>
-                <div className='study-box'>
-                    <img className='education-img' src={images.cs50w} alt='web'></img>
-                    <div className='flex-col space-between'>
-                        <Hover  content={contents.web} title='Web Programming with Python and JavaScript'/>
+                <div className='study-desktop-container'>
+                    <div className='img-container-education'>
+                        <img className='education-img' src={images.cs50w} alt='web'></img>
+                    </div>
+                    <div className='study-box'>
+                        <div className='flex-col space-between'>
+                            <Hover  content={contents.web} title='Web Programming with Python and JavaScript'/>
+                        </div>
                     </div>
                 </div>
-                <div className='study-box'>
-                    <img className='education-img' src={images.unity} alt='games'></img>
-                    <div className='flex-col space-between'>
-                        <Hover  content={contents.games} title='2D VIDEOGAMES DEVELOPMENT WITH C# AND UNITY'/>
+                <div className='study-desktop-container'>
+                    <div className='img-container-education'>
+                        <img className='education-img' src={images.unity} alt='games'></img>
+                    </div>
+                    <div className='study-box'>
+                        <div className='flex-col space-between'>
+                            <Hover  content={contents.games} title='2D VIDEOGAMES DEVELOPMENT WITH C# AND UNITY'/>
+                        </div>
                     </div>
                 </div>
             </div>
