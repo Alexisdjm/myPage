@@ -1077,6 +1077,30 @@ div.show-sidebar {
   transform-origin: left;
 }
 
+/* ------------------------------------------- animations ------------------------------------------------- */
+
+@keyframes cambioDeColor {
+  0% {
+    filter: hue-rotate(0deg);
+  }
+  50% {
+    filter: hue-rotate(60deg);
+  }
+  100% {
+    filter: hue-rotate(0deg);
+  }
+}
+
+.presentation-container {
+  /* Tu estilo actual del fondo con gradiente */
+  background-image: repeating-radial-gradient(circle at 0 0, #0000 0, #000 50px),
+                    repeating-linear-gradient(#29004a, #470000);
+  
+  /* Añadir la animación y configurar la velocidad y la repetición */
+  animation: cambioDeColor 5s linear infinite;
+  /* Puedes ajustar la duración y otros valores según tus preferencias */
+}
+
 /* ------------------------------------------- Media Queries ---------------------------------------------- */
 
 /* ------------------------------------------- Z Fold ----------------------------------------------------- */
