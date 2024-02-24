@@ -1077,6 +1077,64 @@ div.show-sidebar {
   transform-origin: left;
 }
 
+/* ------------------------------------------- submit btn form -------------------------------------------- */
+
+button.submit-btn--contact-form {
+  font-family: inherit;
+  font-size: 20px;
+  background: var(--color-white);
+  color: var(--card-bg-color);
+  padding: 0.7em 1em;
+  padding-left: 0.9em;
+  display: flex;
+  align-items: center;
+  border: none;
+  border-radius: 16px;
+  overflow: hidden;
+  transition: all 0.2s;
+  cursor: pointer;
+  max-width: 130px;
+}
+
+button.submit-btn--contact-form span {
+  display: block;
+  margin-left: 0.3em;
+  transition: all 0.3s ease-in-out;
+}
+
+button.submit-btn--contact-form svg {
+  display: block;
+  transform-origin: center center;
+  transition: transform 0.3s ease-in-out;
+}
+
+button.submit-btn--contact-form:hover .svg-wrapper {
+  animation: fly-1 0.6s ease-in-out infinite alternate;
+}
+
+button.submit-btn--contact-form:hover svg {
+  transform: translateX(1.2em) rotate(45deg) scale(1.1);
+}
+
+button.submit-btn--contact-form:hover span {
+  transform: translateX(5em);
+}
+
+button.submit-btn--contact-form:active {
+  transform: scale(0.95);
+}
+
+@keyframes fly-1 {
+  from {
+    transform: translateY(0.1em);
+  }
+
+  to {
+    transform: translateY(-0.1em);
+  }
+}
+
+
 /* ------------------------------------------- animations ------------------------------------------------- */
 
 @keyframes cambioDeColor {
@@ -1170,37 +1228,12 @@ div.show-sidebar {
 
 @media only screen and (max-width: 463px) {
 
-  .myself-card-dimensions, .future-card, .design-dimensions {
-    width: 90%;
-  }
-
-  .myself-card-dimensions div.grid-box-2-images {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px
-  }
-
   .dev-dimensions {
     display: none;
-  }
-
-  .design-dimensions {
-    gap: 20px;
-    background-color: transparent;
   }
   
   .container-dimensions-dev {
     padding: 0;
-  }
-
-  .overwatch-mobile-top {
-    display: block;
-    width: 100px;
-    height: auto;
-  }
-
-  .overwatch {
-    display: none;
   }
 
   .fromsoftware-logo {
@@ -1209,14 +1242,6 @@ div.show-sidebar {
 
   .cod-logo {
     width: 245px;
-  }
-
-  div.mobile-transparent {
-    background-color: transparent;
-  }
-
-  div.mobile-column {
-    flex-direction: column;
   }
 
   .degree-name, .degree-desc {
@@ -1302,6 +1327,10 @@ div.show-sidebar {
 
   .margin-side-40 {
     margin: 0 40px;
+  }
+
+  .about-dev-mobile-card {
+    min-width: 70vw;
   }
 
 }
@@ -1458,7 +1487,40 @@ div.show-sidebar {
     padding: 15px 30px;
     flex-direction: row;
     top: auto;
-}
+  }
+
+  .future-card, .design-dimensions, .myself-card-dimensions {
+    width: 90%;
+  }
+
+  .design-dimensions {
+    gap: 20px;
+    background-color: transparent;
+  }
+
+  .myself-card-dimensions div.grid-box-2-images {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px
+  }
+
+  div.mobile-transparent {
+    background-color: transparent;
+  }
+
+  div.mobile-column {
+    flex-direction: column;
+  }
+
+  .overwatch {
+    display: none;
+  }
+
+  .overwatch-mobile-top {
+    display: block;
+    width: 100px;
+    height: auto;
+  }
 
 }
 

@@ -8,6 +8,7 @@ function Header() {
     
     const [header, setHeader] = useState(false)
     const sidebar = useRef()
+    const [toggle, setToggle] = useState(false)
     
     useEffect(() => {
         window.scrollTo(0, 0)
@@ -27,9 +28,9 @@ function Header() {
 
     const Checkpath = ({path, id, name, css}) => {
         if (window.location.pathname === path) {
-            return( <HashLink className={css} onClick={() => {showhide(sidebar.current)}} to={'#' + id} smooth>{name}</HashLink> )
+            return( <HashLink className={css} onClick={() => {showhide(sidebar.current); setToggle(false)}} to={'#' + id} smooth>{name}</HashLink> )
         } else {
-            return( <HashLink className={css} onClick={() => {showhide(sidebar.current)}} to={path + '#' + id}>{name}</HashLink> )
+            return( <HashLink className={css} onClick={() => {showhide(sidebar.current); setToggle(false)}} to={path + '#' + id}>{name}</HashLink> )
         }
     }
 
@@ -47,7 +48,7 @@ function Header() {
                     <Link to='/' onClick={() => {ScrollToTop('/')}}>
                         <img src={images.mylogowhite} className={!header ? 'mylogo' : 'mylogo img-smaller'} alt='mylogo'></img>
                     </Link>
-                    <input onChange={() => {showhide(sidebar.current)}} id="toggleChecker" type="checkbox"></input>
+                    <input onChange={() => {showhide(sidebar.current); setToggle(!toggle)}} id="toggleChecker" checked={toggle} type="checkbox"></input>
                     <label id="togglerLable" className="sidebar-btn" htmlFor="toggleChecker">
                     <div className="checkboxtoggler">
                         <div className="line-1"></div>
@@ -59,10 +60,10 @@ function Header() {
                         <img src={images.mylogo} className='footer-logo logo-sidebar-margin' alt='logo'></img>
                         <div className='links-container-footer'>
                             <div className='flex-link'>
-                                <Link to='/' className='link-footer' onClick={() => {ScrollToTop('/'); showhide(sidebar.current)}}>Home</Link>
+                                <Link to='/' className='link-footer' onClick={() => {ScrollToTop('/'); showhide(sidebar.current); setToggle(false)}}>Home</Link>
                             </div>
                             <div className='flex-link'>
-                                <Link to='/about' className='link-footer' onClick={() => {ScrollToTop('/about'); showhide(sidebar.current)}}>About me</Link>
+                                <Link to='/about' className='link-footer' onClick={() => {ScrollToTop('/about'); showhide(sidebar.current); setToggle(false)}}>About me</Link>
                             </div>
                             <div className='flex-link'>
                                 <Checkpath path='/' id='projects' name='Projects' css='link-footer'/>
