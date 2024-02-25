@@ -83,7 +83,7 @@ const Contact = () => {
 
     return(
         <div id='contact' className='contact-form-container'>
-            <Parallax className='section-container flex-col align-center section-margin section-padding' blur={3} bgImage={images.background} bgImageAlt="the cat" strength={600}>
+            <Parallax className='section-container flex-col align-center section-margin section-padding' blur={3} bgImage={images.background} bgImageAlt="the cat" strength={400}>
             <h4 className='skills-title'>Contact me</h4>
             <form className='contact-form flex-col section-padding' onSubmit={handlesubmit}>
                 <input name='name' onChange={handleimput} value={formvalue.name} id='name' type='text' placeholder='Your name' className='contact-input' required></input>
