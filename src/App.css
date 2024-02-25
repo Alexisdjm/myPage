@@ -286,6 +286,10 @@ img.img-smaller {
   max-width: 65%;
 }
 
+.react-multi-carousel-list {
+  min-height: 330px;
+}
+
 .skills-title {
   font-family: var(--outfit-sans-serif);
   font-size: 45px;
@@ -714,6 +718,10 @@ input.submit:hover {
   transition-delay: 0.1s;
 }
 
+.react-parallax.section-container .react-parallax-content {
+  min-width: 740px;
+}
+
 
 /* --------------------------------------------- Footer -------------------------------------------------- */
 
@@ -1100,6 +1108,8 @@ button.submit-btn--contact-form span {
   display: block;
   margin-left: 0.3em;
   transition: all 0.3s ease-in-out;
+  font-family: var(--outfit-sans-serif);
+  font-weight: 400;
 }
 
 button.submit-btn--contact-form svg {
@@ -1590,6 +1600,12 @@ button.submit-btn--contact-form:active {
 
 }
 
+@media only screen and (max-width: 900px) {
+  .react-parallax.section-container .react-parallax-content {
+    min-width: 90vw;
+  }
+}
+
 @media only screen and (max-width: 1023px) {
   .glitch, .my-title {
     text-align: center;
@@ -1621,3 +1637,12 @@ button.submit-btn--contact-form:active {
   }
 }
 
+@media only screen and (min-width: 1024px) {
+  .minicard {
+    position: relative;
+  }
+
+  .minicard:hover {
+    top: -25px;
+  }
+}
