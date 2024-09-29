@@ -238,7 +238,7 @@ img.img-smaller {
 
 .social-media-menu {
   top: 30%;
-  right: 0;
+  right: 0.5em;
   gap: 35px;
   z-index: 9;
   display: flex;
@@ -249,7 +249,9 @@ img.img-smaller {
   flex-direction: column;
   backdrop-filter: blur(8px);
   background:rgb(0, 0, 0, .5);
-  border-radius: 63% 0% 0% 63% / 15% 25% 25% 15%;
+  border-radius: 25px;
+  border: 1px solid rgba(255, 255, 255, 0);
+  /* border-radius: 63% 0% 0% 63% / 15% 25% 25% 15%; */
 }
 
 .social-media-link {
@@ -590,7 +592,7 @@ p.grow {
 }
 
 .technologies-dimensions:hover {
-  opacity: 1;
+  animation: iconsOp 2s linear infinite;
   position: relative;
   top: -10px;
 }
@@ -958,6 +960,24 @@ div.show-sidebar {
   animation: blink 2.5s linear infinite;
 }
 
+.social-media-menu:hover {
+  animation: blinkSocial 2.5s linear infinite;
+}
+
+@keyframes blinkSocial {
+  0% {
+    border: 1px solid rgba(255, 255, 255, 0)
+  }
+
+  50% {
+    border: 1px solid rgba(255, 255, 255, .75)
+  }
+
+  100% {
+    border: 1px solid rgba(255, 255, 255, 0)
+  }
+}
+
 @keyframes blink {
   0% {
     border: 2px solid rgba(255, 255, 255, 0)
@@ -969,6 +989,20 @@ div.show-sidebar {
 
   100% {
     border: 2px solid rgba(255, 255, 255, 0)
+  }
+}
+
+@keyframes iconsOp {
+  0% {
+    opacity: 0.7;
+  }
+
+  50% {
+    opacity: 1
+  }
+
+  100% {
+    opacity: 0.7;
   }
 }
 
@@ -1178,14 +1212,9 @@ button.submit-btn--contact-form:active {
   }
 }
 
+
 .presentation-container {
-  /* Tu estilo actual del fondo con gradiente */
-  background-image: repeating-radial-gradient(circle at 0 0, #0000 0, #000 50px),
-                    repeating-linear-gradient(#29004a, #470000);
-  
-  /* Añadir la animación y configurar la velocidad y la repetición */
   animation: cambioDeColor 5s linear infinite;
-  /* Puedes ajustar la duración y otros valores según tus preferencias */
 }
 
 /* ------------------------------------------- Media Queries ---------------------------------------------- */

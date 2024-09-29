@@ -25,8 +25,8 @@ const Contact = () => {
     const SubmitBtn = ({tag}) => {
         return(
             <button type='submit' className='submit-btn--contact-form'>
-                <div class="svg-wrapper-1">
-                    <div class="svg-wrapper">
+                <div className="svg-wrapper-1">
+                    <div className="svg-wrapper">
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
                         viewBox="0 0 24 24"
@@ -92,7 +92,6 @@ const Contact = () => {
                     <label className='message-label'>Your message</label>
                     <textarea id='body' name='body' onChange={handleimput}  value={formvalue.body} className='message' required></textarea>
                 </div>
-                {/* <input type='submit' className='submit' value='Submit'></input> */}
                 <SubmitBtn tag={"submit"}/>
             </form>
             <Modal open={show} content={'Mail successfully sent'}/>
