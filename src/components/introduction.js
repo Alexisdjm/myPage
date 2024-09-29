@@ -3,14 +3,14 @@ import { useState } from "react";
 
 function First_look({glitchtext, bool, first, second, third, loop, align}) {
 
-    const [animationSpeed, setAnimationSpeed] = useState(5); // 5 segundos es la duración por defecto
+    const [animationSpeed, setAnimationSpeed] = useState(5);
 
     const handleMouseDown = () => {
-      setAnimationSpeed(2.5); // Cambia la duración a la mitad (doble velocidad)
+      setAnimationSpeed(2.5);
     };
   
     const handleMouseUp = () => {
-      setAnimationSpeed(5); // Vuelve a la duración normal
+      setAnimationSpeed(5);
     };
 
     return (
