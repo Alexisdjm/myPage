@@ -18,7 +18,13 @@ const Home = () => {
     return(
         <>
             <Header/>
-            <First glitchtext='Alexis Jiménez' loop={true} bool={true} first='Full Stack Web Developer' second='Electronic Engineer'/>
+            <First 
+                loop={true} 
+                bool={true} 
+                glitchtext='Alexis Jiménez' 
+                first='Full Stack Web Developer' 
+                second='Web Designer' 
+                third='Electronic Engineer'/>
             <SocialMenu/>
             <Skills/>
             <Projects/>
