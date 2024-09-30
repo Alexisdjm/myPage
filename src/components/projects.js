@@ -1,7 +1,7 @@
 import images from '../images/exporting.js';
 import { useState } from 'react';
 
-const Projects = () => {
+const Projects = ({ref}) => {
     const [condiments, setCondiments] = useState(false)
     const [swiss, setSwiss] = useState(false)
     const [ecommerce, setEcommerce] = useState(false)
@@ -17,7 +17,7 @@ const Projects = () => {
     }
 
     return (
-        <div id='projects' className='projects-container'>
+        <div ref={ref} id='projects' className='projects-container'>
             <h4 className='skills-title'>Projects</h4>
             <section id='projects-container' className='project-gallery'>
                 <div className='flex-center project-box' style={{backgroundImage: `url(${images.condimentos})`}}>

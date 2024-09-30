@@ -2,13 +2,15 @@ import images from '../images/exporting.js';
 import { useState, useEffect, useRef } from "react";
 import { FaInstagram, FaGithub, FaLinkedin, FaWhatsapp } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
-import { HashLink } from 'react-router-hash-link';
+import useScrollToSection from '../customHooks.js/useScrollToSection.js';
 
 function Header() {   
     
-    const [header, setHeader] = useState(false)
     const sidebar = useRef()
+    const [header, setHeader] = useState(false)
     const [toggle, setToggle] = useState(false)
+
+    const scrollToSection = useScrollToSection();
     
     useEffect(() => {
         window.scrollTo(0, 0)
@@ -26,12 +28,10 @@ function Header() {
         return('')
     }
 
-    const Checkpath = ({path, id, name, css}) => {
-        if (window.location.pathname === path) {
-            return( <HashLink className={css} onClick={() => {showhide(sidebar.current); setToggle(false)}} to={'#' + id} smooth>{name}</HashLink> )
-        } else {
-            return( <HashLink className={css} onClick={() => {showhide(sidebar.current); setToggle(false)}} to={path + '#' + id}>{name}</HashLink> )
-        }
+    const fewFunctions = (id) => {
+        showhide(sidebar.current); 
+        setToggle(false)
+        scrollToSection(id)
     }
 
     const ScrollToTop = (path) => {
@@ -66,16 +66,16 @@ function Header() {
                                 <Link to='/about' className='link-footer' onClick={() => {ScrollToTop('/about'); showhide(sidebar.current); setToggle(false)}}>About me</Link>
                             </div>
                             <div className='flex-link'>
-                                <Checkpath path='/' id='projects' name='Projects' css='link-footer'/>
+                                <button onClick={() => fewFunctions('projects')} className='link-footer linkbtn'>Projects</button>
                             </div>
                             <div className='flex-link'>
-                                <Checkpath path='/' id='skills' name='Skills' css='link-footer'/>
+                                <button onClick={() => fewFunctions('skills')} className='link-footer linkbtn'>Skills</button>
                             </div>
                             <div className='flex-link'>
-                                <Checkpath path='/' id='technologies' name='Technologies' css='link-footer'/>
+                                <button onClick={() => fewFunctions('technologies')} className='link-footer linkbtn'>Technologies</button>
                             </div>
                             <div className='flex-link'>
-                                <Checkpath path='/' id='contact' name='Contact me' css='link-footer'/>
+                                <button onClick={() => fewFunctions('contact')} className='link-footer linkbtn'>Contact</button>
                             </div>
                         </div>
                         <div className='flex-social-horizontal'>
@@ -94,16 +94,16 @@ function Header() {
                             <Link to='/about' className='link' onClick={() => {ScrollToTop('/about')}}>About me</Link>
                         </div>
                         <div className='flex-link'>
-                            <Checkpath path='/' id='skills' name='Skills' css='link'/>
+                            <button onClick={() => scrollToSection('skills')} className='link linkbtn'>Skills</button>
                         </div>
                         <div className='flex-link'>
-                            <Checkpath path='/' id='projects' name='Projects' css='link'/>
+                            <button onClick={() => scrollToSection('projects')} className='link linkbtn'>Projects</button>
                         </div>
                         <div className='flex-link'>
-                            <Checkpath path='/' id='technologies' name='Technologies' css='link'/>
+                            <button onClick={() => scrollToSection('technologies')} className='link linkbtn'>Technologies</button>
                         </div>
                         <div className='flex-link'>
-                            <Checkpath path='/' id='contact' name='Contact' css='contact-link'/>
+                            <button onClick={() => scrollToSection('contact')} className='button'>Contact</button>
                         </div>
                     </div>
                 </div>

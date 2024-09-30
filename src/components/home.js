@@ -7,8 +7,8 @@ import Technologies from './technologies.js'
 import Contact from './contactForm';
 import Header from './header.js'
 import Footer from './footer.js'
-import { useEffect } from "react";
 import Scrollbar from './scrollbar.js'
+import { useEffect } from "react";
 
 const Home = () => {
 

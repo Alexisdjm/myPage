@@ -121,6 +121,14 @@ div.navbar-scroll {
   text-decoration: none;
 }
 
+.linkbtn {
+  padding: 0;
+  border: none;
+  font-size: 16px;
+  font-family: var(--outfit-sans-serif);
+  background-color: transparent;
+}
+
 .link {
   color: var(--color-white);
 }
@@ -724,6 +732,70 @@ input.submit:hover {
 .react-parallax.section-container .react-parallax-content {
   min-width: 740px;
 }
+
+/* --------------------------------------------- new site button ----------------------------------- */
+
+/* From Uiverse.io by dpaulos6 */ 
+/* From Uiverse.io by nikk7007 */ 
+.button {
+  --color: white;
+  padding: 0.7em 1.6em;
+  background-color: transparent;
+  border-radius: 15px;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  transition: .6s;
+  font-weight: 400;
+  font-size: 18px;
+  border: 1px solid;
+  font-family: var(--outfit-sans-serif);
+  color: var(--color);
+  z-index: 1;
+ }
+ 
+ .button::before, .button::after {
+  content: '';
+  display: block;
+  width: 50px;
+  height: 50px;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  border-radius: 50%;
+  z-index: -1;
+  background-color: var(--color);
+  transition: 1s ease;
+ }
+ 
+ .button::before {
+  top: -1em;
+  left: -1em;
+ }
+ 
+ .button::after {
+  left: calc(100% + 1em);
+  top: calc(100% + 1em);
+ }
+ 
+ .button:hover::before, .button:hover::after {
+  height: 410px;
+  width: 410px;
+ }
+ 
+ .button:hover {
+  color: rgb(10, 25, 30);
+ }
+ 
+ .button:active {
+  filter: brightness(.8);
+ }
+
+ .button.skills-btn {
+  padding: 1em 2em;
+  font-size: 20px;
+  border: 3px solid var(--color-white)
+ }
+ 
 
 /* --------------------------------------------- horizonta scrollbar --------------------------------- */
 

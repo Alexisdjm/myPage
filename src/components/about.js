@@ -3,6 +3,7 @@ import Footer from "./footer.js"
 import First from "./introduction.js"
 import Boxes from "./aboutBoxes.js"
 import SocialMenu from "./socialmedia.js"
+import Scrollbar from './scrollbar.js'
 import { useEffect } from "react";
 
 const About = () => {
@@ -13,6 +14,7 @@ const About = () => {
 
     return(
         <>
+            <Scrollbar/>
             <Header/>
             <First glitchtext='About Me' bool={false} align='center'/>
             <SocialMenu/>
