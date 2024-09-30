@@ -8,6 +8,7 @@ import Contact from './contactForm';
 import Header from './header.js'
 import Footer from './footer.js'
 import { useEffect } from "react";
+import Scrollbar from './scrollbar.js'
 
 const Home = () => {
 
@@ -17,6 +18,7 @@ const Home = () => {
 
     return(
         <>
+            <Scrollbar/>
             <Header/>
             <First 
                 loop={true} 
