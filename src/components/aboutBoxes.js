@@ -63,9 +63,9 @@ const Boxes = () => {
             <div className="my-resume-container flex-center card-space-gap">
                 <div className="card-align-bg myself-card-dimensions flex-col align-center inner-card-gap margin-side-40">
                     <h4 className="about-boxes-title justify-center-text">Who Am I ?</h4>
-                    <p className="page-content justify-center-text myself-content">
+                    <div className="page-content justify-center-text myself-content">
                         <ParagraphWithLineBreaks text={content.myself}/>
-                    </p>
+                    </div>
                     <Images css='flex-center align-center first-gap grid-box-2-images' img1={images.engineer} img2={images.ui} img3={images.web} img4={images.graduation}/>
                 </div>
             </div>
@@ -122,9 +122,9 @@ const Boxes = () => {
             <div className="flex-center card-space-gap container-about-settings">
                 <div className="card-align-bg future-card flex-col align-center">
                     <h4 className="about-boxes-title justify-center-text">What I Want To Do ?</h4>
-                    <p className="page-content justify-center-text myself-content">
+                    <div className="page-content justify-center-text myself-content">
                         <ParagraphWithLineBreaks text={content.iwant}/>
-                    </p>
+                    </div>
                     <Images css='grid-2' img1={images.reactlogo} img2={images.flutter} img3={images.unityLogo} img4={images.ai}/>
                 </div>
                 <div id="frontend" className="card-align-bg frontend-card flex-col align-center card-space-gap">
