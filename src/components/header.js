@@ -7,6 +7,7 @@ import useScrollToSection from '../customHooks.js/useScrollToSection.js';
 function Header() {   
     
     const sidebar = useRef()
+    const rmSpan = useRef()
     const [header, setHeader] = useState(false)
     const [toggle, setToggle] = useState(false)
 
@@ -56,35 +57,37 @@ function Header() {
                         <div className="line-3"></div>
                     </div>
                     </label>
-                    <div ref={sidebar} className='sidebar align-center'>
-                        <img src={images.mylogo} className='footer-logo logo-sidebar-margin' alt='logo'></img>
-                        <div className='links-container-footer'>
-                            <div className='flex-link'>
-                                <Link to='/' className='link-footer' onClick={() => {ScrollToTop('/'); showhide(sidebar.current); setToggle(false)}}>Home</Link>
+                    <div ref={sidebar} className='sidebar align-center flex-sidebar'>
+                        <div className='header-content--box'>
+                            <img src={images.mylogo} className='footer-logo logo-sidebar-margin' alt='logo'></img>
+                            <div className='links-container-footer'>
+                                <div className='flex-link'>
+                                    <Link to='/' className='link-footer' onClick={() => {ScrollToTop('/'); showhide(sidebar.current); setToggle(false)}}>Home</Link>
+                                </div>
+                                <div className='flex-link'>
+                                    <Link to='/about' className='link-footer' onClick={() => {ScrollToTop('/about'); showhide(sidebar.current); setToggle(false)}}>About me</Link>
+                                </div>
+                                <div className='flex-link'>
+                                    <button onClick={() => fewFunctions('projects')} className='link-footer linkbtn'>Projects</button>
+                                </div>
+                                <div className='flex-link'>
+                                    <button onClick={() => fewFunctions('skills')} className='link-footer linkbtn'>Skills</button>
+                                </div>
+                                <div className='flex-link'>
+                                    <button onClick={() => fewFunctions('technologies')} className='link-footer linkbtn'>Technologies</button>
+                                </div>
+                                <div className='flex-link'>
+                                    <button onClick={() => fewFunctions('contact')} className='link-footer linkbtn'>Contact</button>
+                                </div>
                             </div>
-                            <div className='flex-link'>
-                                <Link to='/about' className='link-footer' onClick={() => {ScrollToTop('/about'); showhide(sidebar.current); setToggle(false)}}>About me</Link>
-                            </div>
-                            <div className='flex-link'>
-                                <button onClick={() => fewFunctions('projects')} className='link-footer linkbtn'>Projects</button>
-                            </div>
-                            <div className='flex-link'>
-                                <button onClick={() => fewFunctions('skills')} className='link-footer linkbtn'>Skills</button>
-                            </div>
-                            <div className='flex-link'>
-                                <button onClick={() => fewFunctions('technologies')} className='link-footer linkbtn'>Technologies</button>
-                            </div>
-                            <div className='flex-link'>
-                                <button onClick={() => fewFunctions('contact')} className='link-footer linkbtn'>Contact</button>
+                            <div className='flex-social-horizontal'>
+                                <a target="_blank" rel="noreferrer" className='link-sidebar-icon' href="https://wa.me/584127615686?text=Hi%20Alexis%20how%20are%20you?"><FaWhatsapp/></a>
+                                <a target="_blank" rel="noreferrer" className='link-sidebar-icon' href='https://instagram.com/alexisdjm__'><FaInstagram /></a>
+                                <a target="_blank" rel="noreferrer" className='link-sidebar-icon' href='https://github.com/Alexisdjm'><FaGithub/></a>
+                                <a target="_blank" rel="noreferrer" className='link-sidebar-icon' href='https://www.linkedin.com/in/alexis-jimenez-42083823a'><FaLinkedin/></a>
                             </div>
                         </div>
-                        <div className='flex-social-horizontal'>
-                            <a target="_blank" rel="noreferrer" className='link-sidebar-icon' href="https://wa.me/584127615686?text=Hi%20Alexis%20how%20are%20you?"><FaWhatsapp/></a>
-                            <a target="_blank" rel="noreferrer" className='link-sidebar-icon' href='https://instagram.com/alexisdjm__'><FaInstagram /></a>
-                            <a target="_blank" rel="noreferrer" className='link-sidebar-icon' href='https://github.com/Alexisdjm'><FaGithub/></a>
-                            <a target="_blank" rel="noreferrer" className='link-sidebar-icon' href='https://www.linkedin.com/in/alexis-jimenez-42083823a'><FaLinkedin/></a>
-                        </div>
-    
+                        <span onClick={() => {showhide(sidebar.current); setToggle(false)}}></span>
                     </div>
                     <div className="links-container">
                         <div className='flex-link'>

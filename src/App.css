@@ -1492,6 +1492,10 @@ button.submit-btn--contact-form:active {
     display: none;
   }
 
+  .sidebar-btn {
+    z-index: 999;
+  }
+
   .sidebar-btn, #education-mobile-slider {
     display: block;
   }
@@ -1499,18 +1503,31 @@ button.submit-btn--contact-form:active {
   .sidebar {
     visibility: hidden;
     opacity: 0;
-    width: 75%;
+    width: 100%;
     display: flex;
     height: 100vh;
     left: 0;
     top: 0;
     position: fixed;
-    flex-direction: column;
-    justify-content: space-between;
-    background-color: var(--color-white);
     transition: transform .5s ease-out,opacity .5s ease,visibility 0s .5s;
     transform: translate3d(-50px,0,0);
+  }
+
+  .header-content--box {
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh;
+    background-color: var(--color-white);
     box-shadow: 5px 1px 25px -4px rgba(0,0,0,0.2);
+  }
+
+  .sidebar span {
+    display: block;
+    width: 25%;
+    height: 85vh;
   }
 
   .what-i-do {
