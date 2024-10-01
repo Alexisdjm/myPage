@@ -1698,6 +1698,17 @@ button.submit-btn--contact-form:active {
   }
 }
 
+@media only screen and (min-width:768px) and (max-width: 901px) {
+  .mylogo {
+    width: 50px;
+    height: 50px;
+  }
+
+  .links-container, .links-container-footer {
+    gap: 1em;
+  }
+}
+
 @media only screen and (min-width:768px) and (max-width: 1023px) {
   .social-media-menu {
     display: none;
