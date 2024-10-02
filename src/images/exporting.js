@@ -43,7 +43,12 @@ const images = {
     graduation: require('./icons/graduation-hat.webp'),
     fontawesome: require('./icons/fontawesome.webp'),
     check: require('./icons/check-gif.gif'),
-    condimentos: require('./projects/condimentos.webp')
+    condimentos: require('./projects/condimentos.webp'),
+    design1: require('./icons/casa.png'),
+    design2: require('./icons/sushi.png'),
+    design3: require('./icons/mypage.png'),
+
+
 }
 
 export default images
