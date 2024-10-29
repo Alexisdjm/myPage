@@ -263,10 +263,6 @@ img.img-smaller {
   transition: right 0.3s ease-in-out;
 }
 
-.social-media-menu:hover {
-  right: 0.2em;
-}
-
 .social-media-link {
   opacity: .6;
   transition: .3s ease;
@@ -1849,6 +1845,12 @@ button.submit-btn--contact-form:active {
     right: 3%;
   }
 
+}
+
+@media only screen and (min-aspect-ratio: 1/1) {
+  .social-media-menu:hover {
+    right: 0.2em;
+  }
 }
 
 @media only screen and (max-width: 900px) {
