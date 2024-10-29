@@ -19,7 +19,7 @@ const Error404 = () => {
   }, []);
 
   return (
-    <div ref={vantaRef} className="not-found--bg" style={{ height: "100vh", width: "100vw" }}>
+    <div ref={vantaRef} className="not-found--bg">
         <div className="container-404"> 
             <h1 className="title-404--not-found">404</h1>
             <h4 className="text-404--not-found">It seems you got a little bit lost :(</h4>
