@@ -1,13 +1,12 @@
+import { Link } from 'react-router-dom';
 import images from '../images/exporting.js';
 import { useState, useEffect, useRef } from "react";
-import { FaInstagram, FaGithub, FaLinkedin, FaWhatsapp } from 'react-icons/fa';
-import { Link } from 'react-router-dom';
+import { FaInstagram, FaGithub, FaLinkedin, FaWhatsapp, FaTiktok } from 'react-icons/fa';
 import useScrollToSection from '../customHooks.js/useScrollToSection.js';
 
 function Header() {   
     
     const sidebar = useRef()
-    const rmSpan = useRef()
     const [header, setHeader] = useState(false)
     const [toggle, setToggle] = useState(false)
 
@@ -81,10 +80,11 @@ function Header() {
                                 </div>
                             </div>
                             <div className='flex-social-horizontal'>
-                                <a target="_blank" rel="noreferrer" className='link-sidebar-icon' href="https://wa.me/584127615686?text=Hi%20Alexis%20how%20are%20you?"><FaWhatsapp/></a>
+                                <a target="_blank" rel="noreferrer" className='link-sidebar-icon' href="https://wa.me/584245604821?text=Hi%20Alexis%20how%20are%20you?"><FaWhatsapp/></a>
                                 <a target="_blank" rel="noreferrer" className='link-sidebar-icon' href='https://instagram.com/alexisdjm__'><FaInstagram /></a>
                                 <a target="_blank" rel="noreferrer" className='link-sidebar-icon' href='https://github.com/Alexisdjm'><FaGithub/></a>
                                 <a target="_blank" rel="noreferrer" className='link-sidebar-icon' href='https://www.linkedin.com/in/alexis-jimenez-42083823a'><FaLinkedin/></a>
+                                <a target="_blank" rel="noreferrer" className='link-sidebar-icon' href='https://www.tiktok.com/@ad.codeverse'><FaTiktok/></a>
                             </div>
                         </div>
                         <span onClick={() => {showhide(sidebar.current); setToggle(false)}}></span>

@@ -158,15 +158,15 @@ div.navbar-scroll {
 }
 
 .contact-link {
+  padding: 10px 15px;
+  border-radius: 8px;
+  transition: .3s ease;
   display: inline-block;
   text-decoration: none;
   color: var(--card-bg-color);
-  background-color: var(--color-white);
-  padding: 10px 15px;
-  border-radius: 8px;
-  font-family: var(--outfit-sans-serif);
   border:1px solid var(--color-white);
-  transition: .3s ease;
+  background-color: var(--color-white);
+  font-family: var(--outfit-sans-serif);
   transition-property: opacity,border-color,background-color,color;
 }
 
@@ -246,20 +246,25 @@ img.img-smaller {
 
 .social-media-menu {
   top: 30%;
-  right: 0.5em;
+  right: -2.3em;
   gap: 35px;
   z-index: 9;
   display: flex;
-  color: white;
   position: fixed;
   font-size: 24px;
   padding: 35px 20px;
+  border-radius: 25px;
   flex-direction: column;
+  color: var(--color-white);
   backdrop-filter: blur(8px);
   background:rgb(0, 0, 0, .5);
-  border-radius: 25px;
   border: 1px solid rgba(255, 255, 255, 0);
-  /* border-radius: 63% 0% 0% 63% / 15% 25% 25% 15%; */
+  animation: blinkSocial 4s linear infinite;
+  transition: right 0.3s ease-in-out;
+}
+
+.social-media-menu:hover {
+  right: 0.2em;
 }
 
 .social-media-link {
@@ -850,9 +855,9 @@ input.submit:hover {
 /* -------------------------------------------- mobile sidebar --------------------------------------------- */
 
 .sidebar-btn {
-  background-color: transparent;
   border: none;
   width: fit-content;
+  background-color: transparent;
 }
 
 .img-sidebar {
@@ -865,11 +870,11 @@ input.submit:hover {
 }
 
 div.show-sidebar {
+  opacity: 1;
   visibility: visible;
-  transition: opacity 500ms ease, transform 500ms ease, visibility 0s 0s;
   transition-delay: 0.1s;
   transform: translate3d(0, 0, 0);
-  opacity: 1;
+  transition: opacity 500ms ease, transform 500ms ease, visibility 0s 0s;
 }
 
 .link-sidebar-icon {
@@ -878,11 +883,11 @@ div.show-sidebar {
 }
 
 .flex-social-horizontal {
+  gap: 20px;
   display: flex;
-  justify-content: center;
-  gap: 15px;
   align-items: center;
   margin-bottom: 40px;
+  justify-content: center;
 }
 
 
@@ -1054,9 +1059,80 @@ div.show-sidebar {
   animation: blink 2.5s linear infinite;
 }
 
-.social-media-menu:hover {
-  animation: blinkSocial 2.5s linear infinite;
+
+/* ------------------------------------------------------- not found --------------------------------------------------------- */
+.not-found--bg {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  align-items: center;
 }
+
+.title-404--not-found {
+  font-size: 160px;
+  text-align: center;
+  color: var(--color-white);
+  margin: 0;
+}
+
+.text-404--not-found {
+  margin: 0;
+  color: var(--color-white);
+  font-size: 24px;
+  font-weight: 300;
+  text-align: center;
+}
+
+.container-404 {
+  width: fit-content;
+  height: fit-content;
+  padding: 2em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.back-to--home {
+  gap: 0.1em;
+  display: flex;
+  font-size: 14px;
+  margin-top: 12.5vh;
+  font-weight: 300;
+  align-items: center;
+  flex-direction: column;
+  color: rgba(255, 255, 255, 0.6);
+  transition: color 0.3s ease-in-out
+}
+
+.back-to--home svg {
+  position: relative;
+  filter: drop-shadow(40px)
+}
+
+.back-to--home:hover svg {
+  top: -5px;
+}
+
+.back-to--home:hover {
+  color: var(--color-white)
+}
+
+.footer--404 {
+  bottom: 0;
+  height: 20vh;
+  width: 100vw;
+  position: absolute;
+  background: var(--card-bg-color);
+  background: -webkit-linear-gradient(0deg, #0f0b17 40%, rgba(0, 0, 0, 0) 100%);
+  background: linear-gradient(0deg, #0f0b17 40%, rgba(0, 0, 0, 0) 100%);
+}
+
+
+/* --------------------------------------------------------------------------------------------------------------------------- */
+
+
 
 @keyframes blinkSocial {
   0% {
@@ -1064,13 +1140,14 @@ div.show-sidebar {
   }
 
   50% {
-    border: 1px solid rgba(255, 255, 255, .75)
+    border: 1px solid rgba(255, 255, 255, .6)
   }
 
   100% {
     border: 1px solid rgba(255, 255, 255, 0)
   }
 }
+
 
 @keyframes blink {
   0% {
@@ -1728,6 +1805,7 @@ button.submit-btn--contact-form:active {
     gap: 1em;
   }
 }
+
 
 @media only screen and (min-width:768px) and (max-width: 1023px) {
   .social-media-menu {
